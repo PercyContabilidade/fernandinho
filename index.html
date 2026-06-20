@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Estadista na Era Digital - Proposta Estratégica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 - Fundo corporativo escuro */
+            color: #f8fafc; /* Slate 50 - Texto claro */
+            overflow: hidden; /* Previne rolagem global para focar nos slides */
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .slide {
+            display: none;
+            height: 100vh;
+            width: 100vw;
+            padding: 2rem;
+            box-sizing: border-box;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7); /* Slate 800 com transparência */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .highlight-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b); /* Amber 400 to 500 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 50;
+        }
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .control-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+        /* Fundo de grade sutil para dar um ar de dados/governança */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="relative">
+    <div class="bg-grid"></div>
+
+    <div id="slide-1" class="slide active">
+        <div class="max-w-5xl mx-auto w-full text-center glass-panel">
+            <div class="mb-6 inline-block p-4 rounded-full bg-slate-800/50 border border-slate-700">
+                <i class="fa-solid fa-scale-balanced text-4xl text-amber-500"></i>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                O Estadista na <br><span class="highlight-text">Era Digital</span>
+            </h1>
+            <p class="text-xl text-slate-300 md:text-2xl font-light mb-8 max-w-3xl mx-auto">
+                Governança, Autoridade Institucional e a Bússola para o Voto de Ancoragem.
+            </p>
+            <div class="h-1 w-24 bg-amber-500 mx-auto rounded"></div>
+            <p class="mt-8 text-sm text-slate-400 uppercase tracking-widest font-semibold">Proposta Estratégica</p>
+        </div>
+    </div>
+
+    <div id="slide-2" class="slide">
+        <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row gap-8 items-center h-full">
+            <div class="flex-1 glass-panel">
+                <h2 class="text-3xl font-bold mb-6 text-red-400 border-b border-slate-700 pb-4"><i class="fa-solid fa-triangle-exclamation mr-3"></i>O Colapso da Confiança</h2>
+                <ul class="space-y-6 text-lg text-slate-200">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-chart-pie mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <strong class="text-white">A Falência Partidária:</strong> 52% dos brasileiros dizem NÃO confiar de forma alguma nos partidos políticos (Datafolha, 2026).
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-building-columns mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <strong class="text-white">Crise de Representatividade:</strong> Desconfiança no Congresso atinge 45%. O eleitor não vota mais na "sigla".
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <strong class="text-white">O Ceticismo Fluminense:</strong> No RJ, a abstenção e o cinismo ditam o ritmo. O voto fisiológico (troca de favores) tornou-se caro e sem lealdade.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex-1 flex flex-col justify-center items-center p-8 bg-slate-800/30 rounded-2xl border border-slate-700 h-full">
+                <div class="text-[8rem] font-bold highlight-text leading-none">52%</div>
+                <div class="text-xl text-slate-400 font-medium uppercase tracking-wider mt-4 text-center">Desconfiança Absoluta<br>nas Legendas</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="slide-3" class="slide">
+        <div class="max-w-5xl mx-auto w-full glass-panel">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-4 highlight-text">O Posicionamento: O Estadista Digital</h2>
+                <p class="text-xl text-slate-300 font-light">A internet não precisa de barulho. Precisa de ordem, clareza e experiência para organizar o caos.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fa-solid fa-book-open text-3xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">A Caixa-Preta</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Exposição técnica e implacável dos Estatutos Partidários. Leitura da realidade jurídica, sem ataques pessoais.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fa-solid fa-users-gear text-3xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">Fim da Ilusão</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Demonstrar como as legendas operam como oligarquias centralizadas no controle do bilionário Fundo Eleitoral.</p>
+                </div>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fa-solid fa-masks-theater text-3xl text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3 text-white">A Máscara Ideológica</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Explicar o Paradoxo Institucional: como matrizes radicais escondem projetos autoritários por trás de termos democráticos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="slide-4" class="slide">
+        <div class="max-w-5xl mx-auto w-full glass-panel text-center">
+            <h2 class="text-4xl font-bold mb-8 text-white">A Construção do Legado (Resultados)</h2>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12 text-left">
+                <div class="flex-1 flex items-start gap-4">
+                    <div class="bg-emerald-500/20 p-3 rounded-lg border border-emerald-500/30 text-emerald-400">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-white mb-1">Imunidade a Cancelamentos</h4>
+                        <p class="text-sm text-slate-400">Base documental oficial do TSE. Blindagem jurídica total.</p>
+                    </div>
+                </div>
+                <div class="flex-1 flex items-start gap-4">
+                    <div class="bg-blue-500/20 p-3 rounded-lg border border-blue-500/30 text-blue-400">
+                        <i class="fa-solid fa-filter text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg text-white mb-1">Audiência High Ticket</h4>
+                        <p class="text-sm text-slate-400">Atração de formadores de opinião, líderes e eleitores focados no "voto consciente".</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-slate-900/80 rounded-xl border-l-4 border-amber-500 mx-auto max-w-3xl">
+                <p class="text-xl italic text-slate-300">
+                    "A sua mensagem não é mais pedir voto; é explicar o poder. <br>
+                    <strong class="text-amber-500 font-semibold">Quem explica o jogo, domina o tabuleiro.</strong>"
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" class="control-btn" onclick="mudarSlide(-1)" disabled title="Slide Anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="nextBtn" class="control-btn" onclick="mudarSlide(1)" title="Próximo Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script>
+        let slideAtual = 1;
+        const totalSlides = 4;
+
+        function atualizarBotoes() {
+            document.getElementById('prevBtn').disabled = slideAtual === 1;
+            document.getElementById('nextBtn').disabled = slideAtual === totalSlides;
+        }
+
+        function mudarSlide(direcao) {
+            const slides = document.querySelectorAll('.slide');
+            
+            // Oculta o atual
+            document.getElementById(`slide-${slideAtual}`).classList.remove('active');
+            
+            // Calcula o próximo
+            slideAtual += direcao;
+            
+            // Limites de segurança
+            if (slideAtual < 1) slideAtual = 1;
+            if (slideAtual > totalSlides) slideAtual = totalSlides;
+            
+            // Mostra o novo
+            document.getElementById(`slide-${slideAtual}`).classList.add('active');
+            
+            atualizarBotoes();
+        }
+
+        // Suporte para teclas de seta do teclado
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight') {
+                if (slideAtual < totalSlides) mudarSlide(1);
+            } else if (event.key === 'ArrowLeft') {
+                if (slideAtual > 1) mudarSlide(-1);
+            }
+        });
+    </script>
+</body>
+</html>
